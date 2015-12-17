@@ -14,7 +14,9 @@ public class Node {
 		this.data = data;
 	}
 	
-	// Add Node ------------------------------------------------
+	//-----------------------------------------
+	// Add nodes
+	// ----------------------------------------
 	public void addNode(int value)
 	{
 		
@@ -35,7 +37,9 @@ public class Node {
 	}
 
 
-	// Search for items 
+	//-----------------------------------------
+	// Search nodes
+	// ----------------------------------------
 	public void search(int value) {
 		
 		if (data==value) {System.out.println("Item found:"+data); 		}
@@ -82,6 +86,16 @@ public class Node {
 			{ queue.add(current.right); }
 		}
 		
+	}
+
+	public void preOrderTraversal(Node current) {
+
+		if (current == null) return;
+		System.out.print(current.data+"-");
+		
+		preOrderTraversal(current.left);
+		preOrderTraversal(current.right);
+
 	}
 	
 	}

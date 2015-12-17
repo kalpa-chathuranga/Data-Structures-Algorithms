@@ -28,6 +28,12 @@ public class BinaryTree {
 		else root.levelOrderTraversal(root);
 	}
 
+	public void preOrderTraversal()
+	{
+		System.out.println("Initiating pre order traversal");
+		if(root ==null) return;
+		else root.preOrderTraversal(root);
+	}
 }
 
 
