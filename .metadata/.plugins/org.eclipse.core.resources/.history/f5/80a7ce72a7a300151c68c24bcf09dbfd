@@ -1,0 +1,103 @@
+
+
+public class Sort {
+
+	int[] tempArray, array;
+	
+	
+	// Bubble sort implementation
+	public int[] bubbleSort(int[] array) {
+
+		for (int out = array.length - 1; out > 1; out--) {
+
+			for (int i = 0; i < out; i++) {
+
+				if (array[i] > array[i + 1]) {
+					// swap
+					int temp = array[i];
+					array[i] = array[i + 1];
+					array[i + 1] = temp;
+				}
+			}
+		}
+
+		return array;
+
+	}
+
+	// Selection sort implementation
+	public int[] selectionSort(int[] array) {
+
+		int out = array.length - 1;
+		for (int in = 0; in < out; in++) {
+
+			int min = in;
+
+			for (int j = in + 1; j < out + 1; j++) {
+
+				if (array[min] > array[j]) {
+
+					min = j;
+				}
+			}
+
+			int temp = array[in];
+			array[in] = array[min];
+			array[min] = temp;
+		}
+
+		return array;
+	}
+
+	// Insertion sort implementation
+	public int[] insertionSort(int[] array) {
+
+		for (int out = 1; out < array.length; out++) {
+			int in = out;
+			int temp = array[out];
+			
+			while (in>0 && temp<= array[in-1]){
+				//move sorted portion to have some space to array[in-1]
+				array[in] = array[in-1];
+				in --;
+			}
+			
+			array[in] = temp;
+		}
+
+		return array;
+	}
+
+
+	public void mergeSort(int[] array)
+	{
+		this.array = array;
+		tempArray = new int[array.length];
+		doPartition(0,array.length-1);
+	}
+
+	public void doPartition(int lowerInd, int highInd) {
+
+		if (lowerInd < highInd) {
+			int middle = lowerInd + (highInd - lowerInd)/2;
+			
+			doPartition(lowerInd, middle);
+			doPartition(middle+1, highInd);
+			
+			mergePartitions(lowerInd, middle, highInd);
+			
+		}
+		
+	}
+
+	public void mergePartitions(int lowerInd, int middle, int highInd) {
+		
+			for (int i = lowerInd; i <= highInd; i++) {
+				tempArray[i] = array[i];
+			}
+		
+		
+		
+	}
+
+}

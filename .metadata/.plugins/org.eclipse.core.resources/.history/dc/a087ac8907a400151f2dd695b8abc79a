@@ -1,0 +1,19 @@
+package BinaryTreePackage;
+
+public class BinaryTree {
+
+	private Node root;
+	
+	public BinaryTree() {
+		root = null;
+	}
+	
+	void addNode(int value)
+	{
+		if(root==null){root = new Node(value); }
+		else{root.addNode(value);}
+	}
+	
+}
+
+

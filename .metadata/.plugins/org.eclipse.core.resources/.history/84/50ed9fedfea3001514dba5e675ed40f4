@@ -1,0 +1,12 @@
+import java.util.Arrays;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		int[] unsortedArray = { 105, 85, 24, 14, 32, 45, 75,15 };
+		System.out.println(Arrays.toString(unsortedArray));
+
+	}
+
+}

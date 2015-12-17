@@ -1,0 +1,15 @@
+package BinaryTreePackage;
+
+public class BinaryTree {
+
+	private Node root;
+	
+	
+	void addNode(int value)
+	{
+		
+	}
+	
+}
+
+

@@ -1,0 +1,14 @@
+
+public class MS {
+
+	
+	
+	public void mergeSort(int[] a)
+	{
+		int n = a.length;
+		
+		if(n==1) return;
+		
+		
+	}
+}

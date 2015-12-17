@@ -1,0 +1,52 @@
+
+public class Sort {
+
+
+	 // Bubble sort implementation	
+	 public int[] bubbleSort(int[] array)
+		{
+			
+			for (int out = array.length - 1 ; out > 1; out --) {
+				
+				for (int i = 0; i < out; i++) {
+					
+					if (array[i] > array[i+1])
+					{
+						//swap
+						int temp  = array[i];
+						array[i] = array[i+1];
+						array[i+1] = temp;
+					}
+				}
+			}
+			
+			return array;
+			
+		}
+
+	 
+	 // Selection sort implementation
+	 public int[] selectionSort(int[] array)
+	 {
+		 
+		 for (int in = 0; in < array.length - 1; in++) {
+			
+			 int min = in;
+			 
+			 for (int j = in+1; j < array.length ; j++) {
+				
+				 if (array[min] > array[j]) {
+					 
+					 min = j;
+				}
+			}
+			 
+			 int temp = array[in];
+			 array[in] = array[min];
+			 array[min] = array[temp];
+		}
+		 
+		 return array;
+	 }
+	
+}

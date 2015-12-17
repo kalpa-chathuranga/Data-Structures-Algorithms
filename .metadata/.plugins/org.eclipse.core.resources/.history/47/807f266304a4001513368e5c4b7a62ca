@@ -1,0 +1,34 @@
+package BinaryTreePackage;
+
+public class BinaryTree {
+
+	private Node root;
+	
+	public BinaryTree() {
+		root = null;
+	}
+	
+	public void addNode(int value)
+	{
+		Node x = new Node(value);
+		
+		if( root == null)
+		{
+			root= x;
+		}
+		
+		if(value < root.data)
+		{
+			root.left = new Node(value);
+		}
+		else
+		{
+			root.right = new Node(value);
+		}
+		
+		
+	}
+	
+}
+
+

@@ -1,0 +1,19 @@
+
+public class MS {
+
+	
+	
+	public void mergeSort(int[] a)
+	{
+		int n = a.length;
+		
+		if(n==1) return;
+		
+		int middle = n/2;
+		int[] left = new int[middle];
+		int[] right = new int[n-middle];
+		
+		
+		
+	}
+}

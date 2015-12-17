@@ -1,0 +1,33 @@
+
+public class Sort {
+
+
+		
+	 public int[] bubbleSort(int[] array)
+		{
+			
+			for (int out = array.length - 1 ; out > 1; out --) {
+				
+				for (int i = 0; i < out; i++) {
+					
+					if (array[i] > array[i+1])
+					{
+						//swap
+						int temp  = array[i];
+						array[i] = array[i+1];
+						array[i+1] = temp;
+					}
+				}
+			}
+			
+			return array;
+			
+		}
+
+	 
+	 public int[] selectionSort(int[] array)
+	 {
+		 return null;
+	 }
+	
+}
