@@ -97,5 +97,22 @@ public class Node {
 		preOrderTraversal(current.right);
 
 	}
+
+	public void inOrderTraversal(Node current) {
+		
+		if (current == null) return;
+		inOrderTraversal(current.left);
+		System.out.print(current.data+"-");
+		inOrderTraversal(current.right);
+
+	}
+
+	public void postOrderTraversal(Node current) {
+		
+		if (current == null) return;
+		postOrderTraversal(current.left);
+		postOrderTraversal(current.right);
+		System.out.print(current.data+"-");
+	}
 	
 	}

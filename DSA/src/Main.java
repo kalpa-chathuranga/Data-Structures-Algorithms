@@ -27,6 +27,8 @@ public class Main {
 		BT.search(3214);
 		BT.levelOrderTraversal();
 		BT.preOrderTraversal();
+		BT.inOrderTraversal();
+		BT.postOrderTraversal();
 		
 		System.out.println("Done");
 	}

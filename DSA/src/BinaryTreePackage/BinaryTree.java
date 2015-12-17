@@ -34,6 +34,21 @@ public class BinaryTree {
 		if(root ==null) return;
 		else root.preOrderTraversal(root);
 	}
+	
+	public void inOrderTraversal()
+	{
+		System.out.println("Initiating in order traversal");
+		if(root ==null) return;
+		else root.inOrderTraversal(root);
+	}
+	
+	public void postOrderTraversal()
+	{
+		System.out.println("Initiating post order traversal");
+		if(root ==null) return;
+		else root.postOrderTraversal(root);
+	}
+	
 }
 
 
