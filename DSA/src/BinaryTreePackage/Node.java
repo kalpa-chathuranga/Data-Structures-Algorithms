@@ -1,5 +1,8 @@
 package BinaryTreePackage;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class Node {
 
 	int data;
@@ -54,6 +57,31 @@ public class Node {
 		}
 	}
 	
-	
-}
+	//-----------------------------------------
+	// Depth first (level order traversal)
+	// ----------------------------------------
+		
+	public void levelOrderTraversal(Node root)
+	{
+		System.err.println("Initiating level order traversal");
+		
+		if( root==null )System.out.println("No nodes in BST"); 
+		Queue<Node> queue = new LinkedList<Node>();
+		queue.add(root);
+		
+		while (!queue.isEmpty()) {
+				
+			Node current = queue.poll();
+			System.out.print("-"+current.data);
+			
+			if(current.left != null)
+			{ queue.add(current.left);}
 
+
+			if(current.right != null)
+			{ queue.add(current.right); }
+		}
+		
+	}
+	
+	}

@@ -20,6 +20,16 @@ public class BinaryTree {
 		if (root==null) {System.out.println("No items in BST");		}
 		else{root.search(value);}
 	}
+	
+	
+	public void levelOrderTraversal()
+	{
+		if(root==null) return;
+		else root.levelOrderTraversal(root);
+	}
+
 }
+
+
 
 

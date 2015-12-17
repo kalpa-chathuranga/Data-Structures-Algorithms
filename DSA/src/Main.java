@@ -25,6 +25,7 @@ public class Main {
 		
 		
 		BT.search(3214);
+		BT.levelOrderTraversal();
 		
 		System.out.println("Done");
 	}
