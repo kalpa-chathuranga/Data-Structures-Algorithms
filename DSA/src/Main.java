@@ -9,15 +9,12 @@ public class Main {
 	public static void main(String[] args) {
 
 		
-		LinkedList LL = new LinkedList();
-		LL.addFront(10);
-		LL.addFront(20);
-		LL.addFront(30);
-		LL.addFront(40);
+		int[] a = {21,47,54,12,35,18,58,14,44};
+		System.out.println(Arrays.toString(a));
+		Sort.quickSort(a, 0, a.length -1);
+		System.out.println(Arrays.toString(a));
 		
-		LL.displayList();
-		//LL.printHead();
-
+		
 		System.out.println("ahahah");
 	}
 

@@ -120,4 +120,47 @@ public class Sort {
 		
 	}
 
+	
+	
+	
+	public static void quickSort(int[] a, int start,  int end)
+	{
+		if(start < end) {
+		
+		int pIndex = partition (a, start, end);
+		
+		quickSort(a, start, pIndex- 1);
+		quickSort(a, pIndex+1, end);
+		}
+	}
+
+	private static int partition(int[] a, int start, int end) {
+		//Pivot can be any index.
+		// In this case we choose it as the final element
+		int pivot = a[end];
+		
+		int partitionIndex = start;
+		
+		for(int i = start ; i<=end -1; i++)
+		{
+			if(a[i] <= pivot){
+				int temp = a[i];
+				a[i]=a[partitionIndex];
+				a[partitionIndex] = temp;
+				
+				partitionIndex = partitionIndex + 1;
+			}
+			
+		}
+		
+		int temp = a[partitionIndex];
+		a[partitionIndex]=a[end];
+		a[end] = temp;
+		
+		return partitionIndex;
+		
+		
+	}
+	
+	
 }
