@@ -1,36 +1,24 @@
 import java.util.Arrays;
 
 import BinaryTreePackage.BinaryTree;
+import LinkedListPackage.LinkedList;
 
 public class Main {
 
-	/**
-	 * @param args
-	 */
+	
 	public static void main(String[] args) {
 
-		int[] unsortedArray = { 105, 85, 24, 14, 32, 45, 75,15 };
-		System.out.println(Arrays.toString(unsortedArray));
+		
+		LinkedList LL = new LinkedList();
+		LL.addFront(10);
+		LL.addFront(20);
+		LL.addFront(30);
+		LL.addFront(40);
+		
+		LL.displayList();
+		//LL.printHead();
 
-		
-		BinaryTree BT = new BinaryTree();
-		BT.addNode(10);
-		BT.addNode(12);
-		BT.addNode(5);
-		BT.addNode(3);
-		BT.addNode(15);
-		BT.addNode(8);
-		BT.addNode(16);
-		BT.addNode(5);
-		
-		
-		BT.search(3214);
-		BT.levelOrderTraversal();
-		BT.preOrderTraversal();
-		BT.inOrderTraversal();
-		BT.postOrderTraversal();
-		
-		System.out.println("Done");
+		System.out.println("ahahah");
 	}
 
 }
