@@ -1,0 +1,60 @@
+package LinkedListPackage;
+
+public class LinkedList {
+
+	Node head;
+
+	public LinkedList() {
+
+	}
+
+	public void addFront(int data) {
+		if (head == null)
+			head = new Node(data, null);
+		else {
+			Node current = new Node(data, head);
+			head = current;
+		}
+
+	}
+
+	public void addRear(int data) {
+
+		if(head == null)
+			head = new Node(data, null);
+		else{
+			
+			Node current = new Node(data,null);
+			current = getLastNode().next;
+		}
+		
+	}
+
+	public void displayList() {
+		Node currentNode = head;
+		System.out.println(currentNode.data);
+
+		while (currentNode.next != null) {
+
+			currentNode = currentNode.next;
+			System.out.println(currentNode.data);
+
+		}
+
+	}
+
+	public int getLastNode() {
+
+		Node currentNode = head;
+		while (currentNode.next == null) {
+
+			currentNode = currentNode.next;
+		}
+
+		return currentNode.data;
+	}
+
+	public Node getHeadNode() {
+		return head;
+	}
+}
